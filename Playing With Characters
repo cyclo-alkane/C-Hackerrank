@@ -1,0 +1,18 @@
+//Playing With Characters
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+   char ch,s[10],sen[15];
+   scanf("%c",&ch);
+   printf("%c\n",ch);
+   scanf("%10s",s);
+   printf("%s",s);
+   scanf("%15[^\t]s",sen);
+   printf("%s\n",sen);
+   return 0;
+}
