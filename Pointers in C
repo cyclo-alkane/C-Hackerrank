@@ -1,0 +1,22 @@
+//Pointers in C
+#include <stdio.h>
+#include<math.h>
+void update(double *a,double *b) 
+{
+    double *c,*d;
+    *c=*a+*b;
+    *d=fabs(*a-*b);
+    *a=*c;
+    *b=*d;
+
+}
+
+int main() {
+    double a, b;
+    double *pa = &a, *pb = &b;
+    scanf("%lf %lf", &a, &b);
+    update(pa, pb);
+    printf("%.0lf\n%.0lf", a, b);
+
+    return 0;
+}
