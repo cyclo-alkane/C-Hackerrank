@@ -1,0 +1,25 @@
+//Bitwise Operators
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int n,k,a,b,x=0,y=0,z=0;
+    scanf("%d%d",&n,&k);
+    for(a=1;a<n;a++)
+    {
+        for(b=a+1;b<=n;b++)
+        {
+            if(((a&b)>x)&&((a&b)<k))
+            x=a&b;
+            if(((a|b)>y)&&((a|b)<k))
+            y=a|b;
+            if(((a^b)>z)&&((a^b)<k))
+            z=a^b;
+        }
+        
+    }
+    printf("%d\n%d\n%d\n",x,y,z);
+    return 0;
+}
