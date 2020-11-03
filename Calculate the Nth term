@@ -1,0 +1,29 @@
+//Calculate the Nth term
+#include <stdio.h>
+void find_nth_term(int n, int a, int b, int c) 
+{
+  static int j = 4, i = 0;
+  if (j < n)
+   {
+    i = a + b + c;
+    a = b;
+    b = c;
+    c = i;
+    j++;
+    find_nth_term(n, a, b, c);
+   } 
+  else 
+  {
+      printf("%d",i);
+  }
+}
+
+int main() 
+{
+  int n, a, b, c,ans;
+
+  scanf("%d %d %d %d", &n, &a, &b, &c);
+ // ans= find_nth_term(n, a, b, c);
+  //printf("%d",ans);
+  return 0;
+}
